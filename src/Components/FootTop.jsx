@@ -32,7 +32,7 @@ const FootTop = () => {
                 href="tel:+2348035122042"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="sm:text-lg text-black dark:text-white"
+                className="sm:text-lg text-black dark:text-white whitespace-nowrap"
               >
                 +234-803-512-2042
               </a>
