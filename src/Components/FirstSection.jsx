@@ -69,6 +69,7 @@ const FirstSection = () => {
       y: 0,
       transition: {
         duration: 0.8,
+         ease: "easeInOut",
       },
     },
   };
@@ -78,9 +79,12 @@ const FirstSection = () => {
       opacity: 1,
       transition: {
         duration: 0.2,
+        ease: "easeInOut",
       },
     },
   };
+
+  
 
   const navigate= useNavigate()
 
