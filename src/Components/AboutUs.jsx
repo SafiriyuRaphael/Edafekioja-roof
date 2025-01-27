@@ -68,7 +68,7 @@ const AboutUs = ({ item }) => {
             <br />
             <br />
             <span className="font-bold text-xl">
-              Shelter With Style, Strength With Service.
+              Shelter With Style, Strength With Service. 
             </span>
             Choose Edafekioja—your trusted roofing and construction partner.
           </motion.p>
