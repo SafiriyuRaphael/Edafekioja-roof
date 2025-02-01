@@ -14,7 +14,7 @@ const Ceo = () => {
 
   return (
     <motion.section
-      className="py-11 flex flex-col lg:flex-row w-full items-center md:items-start"
+      className="py-11 flex flex-col lg:flex-row w-full items-center md:items-start  px-5"
       animate={controls}
       initial="hidden"
       variants={containerVariants}
@@ -73,7 +73,7 @@ const Ceo = () => {
           </Link>
           <Link
             target="_blank"
-            to="https://www.instagram.com/talktoavrewilson?igsh=aW5kYzBoa2Fwd2Fh"
+            to="https://www.instagram.com/avrewilson?igsh=MWp2ZXY5Yndpc2szZQ=="
           >
             <Instagram className="size-8 text-black dark:text-white hover:fill-[#FF840E]" />{" "}
           </Link>

@@ -3,17 +3,8 @@ import { Star } from "lucide-react";
 import useView from "../Hooks/inview";
 
 const Testimonials = () => {
-
-  const {
-    ref,
-    controls,
-    cardVariant3,
-    cardVariants1,
-    cardVariants2,
-    containerVariants,
-    cardVariants4,
-    inView, opacity
-  } = useView();
+  const { ref, controls, containerVariants, cardVariants4, opacity } =
+    useView();
 
   const testimonials = [
     {
@@ -38,7 +29,7 @@ const Testimonials = () => {
     },
     {
       comments:
-        "Edafekioja transformed my home with their roofing and window services. The team was friendly, professional, and delivered outstanding results. It’s rare to find a company that values customer satisfaction as much as they do!",
+        "Edafekioja  was one of our contractors. This company exceeded our expectations with their outstanding services. We partnered with them , and their professionalism, attention to detail, and commitment to excellence were remarkable. They truly delivered quality results that stood out.",
       Name: "Project Manager, Contemporary Properties Ltd",
     },
     {
@@ -49,9 +40,18 @@ const Testimonials = () => {
   ];
 
   return (
-    <motion.section className="py-12 bg-gray-400" initial="hidden" animate={controls} ref={ref} variants={containerVariants}>
+    <motion.section
+      className="py-12 bg-gray-400"
+      initial="hidden"
+      animate={controls}
+      ref={ref}
+      variants={containerVariants}
+    >
       <div className="max-w-6xl mx-auto px-6">
-        <motion.h2 className="text-2xl font-bold text-center mb-8 text-gray-800" variants={cardVariants4}>
+        <motion.h2
+          className="text-2xl font-bold text-center mb-8 text-gray-800"
+          variants={cardVariants4}
+        >
           What Our Customers Are Saying
         </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -60,14 +60,17 @@ const Testimonials = () => {
               className="bg-white p-6 rounded-lg shadow-lg text-gray-800"
               key={index}
               variants={opacity}
-             
             >
               <p className="italic mb-4 text-sm">{item.comments}</p>
               <h3 className="text-lg font-bold text-gray-900">{item.Name}</h3>
               <div className="flex ">
-              {Array.from({ length: 5 }, (_, i) => (
-                    <Star key={i} className="fill-yellow-400/50 bg-contain size-5 " />
-                  ))}</div>
+                {Array.from({ length: 5 }, (_, i) => (
+                  <Star
+                    key={i}
+                    className="fill-yellow-400/50 bg-contain size-5 "
+                  />
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>

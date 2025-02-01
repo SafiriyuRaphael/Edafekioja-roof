@@ -2,11 +2,11 @@ import React from "react";
 
 const Examples = () => {
 
-  const normalscapeImages = Array.from({ length: 34 }, (_, i) => ({
+  const normalscapeImages = Array.from({ length: 40 }, (_, i) => ({
     img: `./Projects/normalscape (${i + 2}).jpg`,
   }));
 
-  const lpImages = Array.from({ length: 21 }, (_, i) => ({
+  const lpImages = Array.from({ length: 24 }, (_, i) => ({
     img: `./Projects/LP (${i + 2}).jpg`,
   }));
 
