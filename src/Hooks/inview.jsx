@@ -7,7 +7,7 @@ const useView = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.12,
+    threshold: 0.1,
   });
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const useView = () => {
       opacity:1,
      
       transition:{
-        staggerChildren:0.8,
+        staggerChildren:0.4,
         duration:0.4,
       }
     }

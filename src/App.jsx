@@ -8,6 +8,7 @@ import Faqs from "./Pages/Faqs"
 import Contacts from "./Pages/Contacts"
 import Services from "./Pages/Services"
 import ScrollToTop from "./Components/ScrollToTop"
+import Missing from "./Pages/Missing"
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/faqs" element={<Faqs/>}/>
         <Route path="/contacts" element={<Contacts/>}/>
         <Route path="/services" element={<Services/>}/>
+        <Route path="*" element={<Missing/>}/>
         </Routes>
         <Footer/>
       </div>
