@@ -11,7 +11,7 @@ const HeadNav = () => {
         rel="noopener noreferrer"
         aria-label="Facebook - Visit our page"
       >
-        <Facebook className="text-black size-4 sm:size-6 hover:fill-[#FF840E]" />
+        <Facebook className="text-black size-3 sm:size-6 hover:fill-[#FF840E]" />
       </a>
       <a
         href="https://www.instagram.com/edafekioja_?igsh=MWE3ZTNmaW90eGF3ag=="
@@ -19,7 +19,7 @@ const HeadNav = () => {
         rel="noopener noreferrer"
         aria-label="Instagram - Visit our profile"
       >
-        <Instagram className="text-black size-4 sm:size-6 hover:fill-[#FF840E]" />
+        <Instagram className="text-black size-3 sm:size-6 hover:fill-[#FF840E]" />
       </a>
       <a
         href="https://www.linkedin.com/company/edafekioja/"
@@ -27,7 +27,7 @@ const HeadNav = () => {
         rel="noopener noreferrer"
         aria-label="LinkedIn - Follow us"
       >
-        <Linkedin className="text-black size-4 sm:size-6 hover:fill-[#FF840E]" />
+        <Linkedin className="text-black size-3 sm:size-6 hover:fill-[#FF840E]" />
       </a>
     </div>
 
