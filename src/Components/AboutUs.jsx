@@ -58,19 +58,16 @@ const AboutUs = ({ item }) => {
             className="mt-4 text-lg leading-relaxed"
             variants={cardVariants2}
           >
-            Welcome to Edafekioja, We specialise in the supply and installation
-            of all sorts of Roofing Sheets, Windows and Doors, and Felt Laying
-            with Polyethylene Carpets. We have been in the business since 1999,
-            that is over two decades. Our goal is to offer Quick, Solid, Neat
-            and Satisfactory Jobs to our Clients. Our workers have undergone
-            various training in our field of business and we are still upgrading
-            as the need arises.
+            Welcome to Edafekioja, Since 1999, we have been your trusted patner in roofing and construction, with over two decades of experience in the industry. We specialize in the supply and installation of all kinds of Roofing Sheets, Windows and Doors, as well as Felt Laying with Polyethylene Carpets
+            <br />
+           
+            Our Goal is to deliver Quick, Solid, Neat and Satisfactory jobs to our clients. To achieve this, our workers have undergone extensive training in our field, and we continue to upgrade our skills as the need arises
             <br />
             <br />
-            <span className="font-bold text-xl">
+            <span className="font-bold text-xl pr-1">
               Shelter With Style, Strength With Service. 
             </span>
-            Choose Edafekioja—your trusted roofing and construction partner.
+             Choose Edafekioja—your reliable roofing and construction partner.
           </motion.p>
           {item && (
             <>

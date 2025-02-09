@@ -4,14 +4,14 @@ import TikTokIcon from "../Icons/TikTokIcon"
 const HeadNav = () => {
   return (
     <div className="flex justify-between items-center bg-gray-200">
-    <div className="flex pl-1 sm:pl-12 gap-2 sm:gap-10 w-screen py-3">
+    <div className="flex pl-1 sm:pl-12 gap-1 sm:gap-10 w-screen py-3">
       <a
         href="https://www.facebook.com/share/18n4GGkUo5/?mibextid=wwXIfr"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Facebook - Visit our page"
       >
-        <Facebook className="text-black size-3 sm:size-6 hover:fill-[#FF840E]" />
+        <Facebook className="text-black size-4 sm:size-6 hover:fill-[#FF840E]" />
       </a>
       <a
         href="https://www.instagram.com/edafekioja_?igsh=MWE3ZTNmaW90eGF3ag=="
@@ -19,7 +19,7 @@ const HeadNav = () => {
         rel="noopener noreferrer"
         aria-label="Instagram - Visit our profile"
       >
-        <Instagram className="text-black size-3 sm:size-6 hover:fill-[#FF840E]" />
+        <Instagram className="text-black size-4 sm:size-6 hover:fill-[#FF840E]" />
       </a>
       <a
         href="https://www.linkedin.com/company/edafekioja/"
@@ -27,7 +27,7 @@ const HeadNav = () => {
         rel="noopener noreferrer"
         aria-label="LinkedIn - Follow us"
       >
-        <Linkedin className="text-black size-3 sm:size-6 hover:fill-[#FF840E]" />
+        <Linkedin className="text-black size-4 sm:size-6 hover:fill-[#FF840E]" />
       </a>
     </div>
 

@@ -2,12 +2,12 @@ import React from "react";
 
 const Examples = () => {
 
-  const normalscapeImages = Array.from({ length: 40 }, (_, i) => ({
-    img: `./Projects/normalscape (${i + 2}).jpg`,
+  const normalscapeImages = Array.from({ length: 41 }, (_, i) => ({
+    img: `./Projects/normalscape (${i + 1}).jpg`,
   }));
 
-  const lpImages = Array.from({ length: 24 }, (_, i) => ({
-    img: `./Projects/LP (${i + 2}).jpg`,
+  const lpImages = Array.from({ length: 26 }, (_, i) => ({
+    img: `./Projects/LP (${i + 1}).jpg`,
   }));
 
   const images = [...normalscapeImages, ...lpImages];
