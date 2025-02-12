@@ -9,7 +9,7 @@ const FootBottom = () => {
       </p>
       <ul className="flex gap-2 sm:gap-3 m-0 mt-3 sm:mt-0 justify-center sm:justify-start">
         <li><Link to="/" className="text-black">Home</Link></li>
-        <li><Link to="/abouts" className="text-black">About</Link></li>
+        <li><Link to="/about" className="text-black">About</Link></li>
         <li><Link to="/services" className="text-black">Services</Link></li>
         <li><Link to="/projects" className="text-black">Projects</Link></li>
         <li><Link to="/contacts" className="text-black white whitespace-nowrap">Contact Us</Link></li>
