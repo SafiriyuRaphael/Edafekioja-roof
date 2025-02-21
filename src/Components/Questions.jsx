@@ -31,7 +31,7 @@ const Questions = ({ item }) => {
     {
       question: "What types of doors do you supply and install?",
       answer:
-        "We supply and install a wide range of doors, including security doors, wooden doors, steel doors, and glass doors for both interior and exterior use.",
+        "We supply and install a wide range of doors, including security doors, steel doors, and glass doors for both interior and exterior use.",
     },
     {
       question: "Can you customize windows to fit unique designs?",
