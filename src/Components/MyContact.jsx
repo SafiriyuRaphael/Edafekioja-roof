@@ -6,10 +6,10 @@ import TikTokIcon from "../Icons/TikTokIcon";
 const MyContact = () => {
   const {
     cardVariant3,
-   
+
     cardVariants2,
     containerVariants,
-  
+
     controls,
     ref,
   } = useView();
@@ -47,12 +47,12 @@ const MyContact = () => {
             <Phone size={24} aria-label="Phone icon" />
             <p>Phone:</p>
             <a
-              href="tel:+2348035122042"
+              href="tel:+2348080185982"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg"
             >
-              +234-803-512-2042
+              +234-808-018-5982
             </a>
           </motion.div>
           <motion.div
@@ -76,12 +76,12 @@ const MyContact = () => {
             <img src="/whatsapp.png" alt="WhatsApp" className="h-6 w-6" />{" "}
             <p>WhatsApp:</p>
             <a
-              href="https://wa.me/2348035122042"
+              href="https://wa.me/2348080185982"
               target="_blank"
               className="text-lg"
               rel="noopener noreferrer"
             >
-              +234-803-512-2042
+              +234-808-018-5982
             </a>
           </motion.div>
           <motion.div
@@ -133,7 +133,10 @@ const MyContact = () => {
           </motion.div>
         </div>
       </div>
-      <motion.div className="mt-7 lg:mt-0 lg:w-1/2 w-full" variants={cardVariant3}>
+      <motion.div
+        className="mt-7 lg:mt-0 lg:w-1/2 w-full"
+        variants={cardVariant3}
+      >
         <img
           src="/contactus.jpg"
           alt="Contact Us"

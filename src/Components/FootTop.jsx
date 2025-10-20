@@ -29,12 +29,12 @@ const FootTop = () => {
               <Phone size={24} aria-label="Phone icon" />
               <p>Phone:</p>
               <a
-                href="tel:+2348035122042"
+                href="tel:+2348080185982"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="sm:text-lg text-black dark:text-white whitespace-nowrap"
               >
-                +234-803-512-2042
+                +234-808-018-5982
               </a>
             </p>
             <p className="flex items-center gap-4">
@@ -49,14 +49,18 @@ const FootTop = () => {
               </a>
             </p>
             <p className="flex items-center gap-4">
-              <img src="/whatsapp.png" alt="WhatsApp" className="h-6 w-6 rounded-xl dark:bg-none dark:rounded-none  bg-black" />{" "}
+              <img
+                src="/whatsapp.png"
+                alt="WhatsApp"
+                className="h-6 w-6 rounded-xl dark:bg-none dark:rounded-none  bg-black"
+              />{" "}
               <p>WhatsApp:</p>
               <a
-                href="https://wa.me/2348035122042"
+                href="https://wa.me/2348080185982"
                 target="_blank"
                 className="sm:text-lg text-black dark:text-white whitespace-nowrap"
               >
-                +234-803-512-2042
+                +234-808-018-5982
               </a>
             </p>
             <p className="flex items-center gap-4">
