@@ -1,5 +1,5 @@
-import Service from "../Components/Service"
-import Installation from "../Components/Installation"
+import Service from "../components/Service"
+import Installation from "../components/Installation"
 import { Link } from "react-router-dom"
 
 const Services = () => {

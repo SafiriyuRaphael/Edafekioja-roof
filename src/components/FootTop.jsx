@@ -6,7 +6,7 @@ import {
   Mail,
   ChevronRight,
 } from "lucide-react";
-import TikTokIcon from "../Icons/TikTokIcon";
+import TikTokIcon from "../icons/TikTokIcon";
 
 const FootTop = () => {
   return (

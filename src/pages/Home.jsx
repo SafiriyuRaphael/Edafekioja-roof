@@ -1,10 +1,10 @@
-import FirstSection from "../Components/FirstSection";
-import SlidingProjects from "../Components/SlidingProjects";
-import AboutUs from "../Components/AboutUs";
-import OurProjects from "../Components/OurProjects";
-import Testimonials from "../Components/Testimonials";
-import Questions from "../Components/Questions";
-import GetAQuote from "../Components/GetAQuote";
+import FirstSection from "../components/FirstSection";
+import SlidingProjects from "../components/SlidingProjects";
+import AboutUs from "../components/AboutUs";
+import OurProjects from "../components/OurProjects";
+import Testimonials from "../components/Testimonials";
+import Questions from "../components/Questions";
+import GetAQuote from "../components/GetAQuote";
 import { useEffect, useState } from "react";
 
 const Home = () => {

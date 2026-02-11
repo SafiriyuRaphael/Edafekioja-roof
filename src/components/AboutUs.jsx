@@ -1,8 +1,8 @@
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useView from "../Hooks/inview";
+import useView from "../hooks/inview";
 
 const AboutUs = ({ item }) => {
   const pics = [
@@ -32,7 +32,7 @@ const AboutUs = ({ item }) => {
     }, 6000); // Change the interval time as per your requirement (3000ms = 3 seconds)
 
     return () => clearInterval(interval); // Clean up the interval on component unmount
-  }, []); // Empty dependency array ensures useEffect runs only once
+  }, [pics.length]); // Only depends on number of images
 
   return (
     <section>
@@ -58,16 +58,26 @@ const AboutUs = ({ item }) => {
             className="mt-4 text-lg leading-relaxed"
             variants={cardVariants2}
           >
-            Welcome to Edafekioja, Since 1999, we have been your trusted patner in roofing and construction, with over two decades of experience in the industry. We specialize in the supply and installation of all kinds of Roofing Sheets, Windows and Doors, as well as Felt Laying with Polyethylene Carpets
+            Your home or business deserves roofing, doors, and windows that look
+            beautiful, perform flawlessly, and last through every rainy season
+            without delays, excuses, or hidden costs.
             <br />
-           
-            Our Goal is to deliver Quick, Solid, Neat and Satisfactory jobs to our clients. To achieve this, our workers have undergone extensive training in our field, and we continue to upgrade our skills as the need arises
+            <br />
+            Since 1999, Edafekioja has made that reality for hundreds of clients
+            with premium aluminum (Longspan, Step-tile) and stone-coated roofing
+            sheets, plus expert-fitted windows and doors.
+            <br />
+            <br />
+            Our planning-first approach delivers it every time: detailed
+            planning upfront for honest pricing, clear scopes, on-time results,
+            and neat, waterproofed craftsmanship built for Lagos weather.
             <br />
             <br />
             <span className="font-bold text-xl pr-1">
-              Shelter With Style, Strength With Service. 
+              Quick. Solid. Neat. 100% satisfactory.
+              <br />
+              Shelter with style. Strength with service.
             </span>
-             Choose Edafekioja—your reliable roofing and construction partner.
           </motion.p>
           {item && (
             <>
@@ -95,7 +105,7 @@ const AboutUs = ({ item }) => {
               <div className=" w-full flex justify-center">
                 <motion.button
                   className="mt-14  bg-[#FF840E] text-black font-bold flex justify-center px-7"
-                  onClick={(e) => navigate("/about")}
+                  onClick={() => navigate("/about")}
                   variants={cardVariants1}
                 >
                   {" "}
@@ -114,6 +124,8 @@ const AboutUs = ({ item }) => {
           <img
             src={pics[currentPicIndex]}
             alt="Representation of our office"
+            loading="lazy"
+            decoding="async"
             className="rounded-3xl px-3 shadow-lg"
           />
         </motion.div>

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Installation = () => {
     const installation= [
         {steps: "Step 1: Initial Consultation", process: "We begin by discussing your needs and preferences. This includes understanding the type of service you require (roofing, doors, or windows), your budget, and any specific requirements. During this consultation, we will also assess the site to ensure we recommend the most suitable materials and solutions for your project."},
@@ -27,7 +25,7 @@ const Installation = () => {
         <div className='grid sm:grid-cols-2 gap-5 px-6'>
             {
                 installation.map((step)=>(
-                    <div className='bg-gray-300 py-3 rounded-xl p-4  shadow-2xl dark:text-black shadon'>
+                    <div key={step.steps} className='bg-gray-300 py-3 rounded-xl p-4  shadow-2xl dark:text-black shadon'>
                       <h4>  {step.steps}</h4>
                       <p>{step.process}</p>
                     </div>

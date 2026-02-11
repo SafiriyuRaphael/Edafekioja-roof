@@ -76,7 +76,7 @@ const Questions = ({ item }) => {
             </div>
             <button
               className="mt-14  bg-[#FF840E] text-black font-bold flex self-center px-7"
-              onClick={(e) => navigate("/faqs")}
+              onClick={() => navigate("/faqs")}
             >
               {" "}
               Read More
@@ -84,7 +84,9 @@ const Questions = ({ item }) => {
           </>
         )}
         {!item &&
-          faqs.map((faq, index) => <FaqsLine faq={faq} index={index} />)}
+          faqs.map((faq, index) => (
+            <FaqsLine key={faq.question ?? index} faq={faq} index={index} />
+          ))}
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import { Facebook, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import useView from "../Hooks/inview";
+import useView from "../hooks/inview";
 import { motion } from "framer-motion";
 
 const Ceo = () => {

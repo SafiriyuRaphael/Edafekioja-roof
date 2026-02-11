@@ -21,7 +21,7 @@ const SideBar = ({ showBar }) => {
           <Link to="/services"><li>Services</li></Link>
          <Link to='/projects'> <li>Projects</li></Link>
          <Link to='/contacts'> <li>Contact Us</li></Link>
-         <Link to='faqs'> <li>Faq's</li></Link>
+         <Link to='faqs'> <li>Faq&apos;s</li></Link>
         </ul>
         <div>
           <h6>All rights reserved &copy; 2021</h6>

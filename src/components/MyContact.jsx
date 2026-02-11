@@ -1,7 +1,7 @@
 import { Mail, Phone, Instagram, Facebook } from "lucide-react";
-import useView from "../Hooks/inview";
+import useView from "../hooks/inview";
 import { motion } from "framer-motion";
-import TikTokIcon from "../Icons/TikTokIcon";
+import TikTokIcon from "../icons/TikTokIcon";
 
 const MyContact = () => {
   const {
@@ -34,7 +34,7 @@ const MyContact = () => {
             variants={cardVariants2}
             className="text-base sm:text-lg lg:text-xl font-bold"
           >
-            We're here to help with all your roofing, door, felt laying and
+            We&apos;re here to help with all your roofing, door, felt laying and
             window needs. Whether you need a quote, have a question, or want to
             discuss your next project, our team is ready to assist you.
           </motion.p>
@@ -97,6 +97,7 @@ const MyContact = () => {
               className="flex gap-4"
             >
               edafekioja_
+              
             </a>
           </motion.div>
 
@@ -140,6 +141,8 @@ const MyContact = () => {
         <img
           src="/contactus.jpg"
           alt="Contact Us"
+          loading="lazy"
+          decoding="async"
           className="rounded-xl w-full object-cover"
         />
       </motion.div>

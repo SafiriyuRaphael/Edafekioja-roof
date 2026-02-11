@@ -1,7 +1,7 @@
-import AboutUs from "../Components/AboutUs";
-import Values from "../Components/Values";
-import Ceo from "../Components/Ceo";
-import Testimonials from "../Components/Testimonials";
+import AboutUs from "../components/AboutUs";
+import Values from "../components/Values";
+import Ceo from "../components/Ceo";
+import Testimonials from "../components/Testimonials";
 import { Link } from "react-router-dom";
 
 

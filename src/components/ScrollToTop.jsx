@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
   const location = useLocation();
+  const { pathname, hash } = location;
 
   useEffect(() => {
     // Check if the pathname includes an anchor link (e.g., /#quotes)
-    if (!location.hash) {
+    if (!hash) {
       window.scrollTo(0, 0); // Scroll to the top only if there's no anchor link
     }
-  }, [location]);
+  }, [pathname, hash]);
 
   return null; // This component doesn't render anything
 };

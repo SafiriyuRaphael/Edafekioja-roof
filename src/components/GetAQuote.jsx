@@ -1,4 +1,4 @@
-import useView from "../Hooks/inview";
+import useView from "../hooks/inview";
 import { motion } from "framer-motion";
 
 const GetAQuote = () => {

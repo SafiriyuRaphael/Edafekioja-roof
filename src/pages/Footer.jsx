@@ -1,5 +1,5 @@
-import FootTop from "../Components/FootTop";
-import FootBottom from "../Components/FootBottom";
+import FootTop from "../components/FootTop";
+import FootBottom from "../components/FootBottom";
 
 const Footer = () => {
   return (

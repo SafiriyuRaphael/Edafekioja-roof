@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-import useView from "../Hooks/inview";
+import useView from "../hooks/inview";
 
 const Testimonials = () => {
   const { ref, controls, containerVariants, cardVariants4, opacity } =

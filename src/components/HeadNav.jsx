@@ -1,5 +1,4 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
-import TikTokIcon from "../Icons/TikTokIcon";
 
 const HeadNav = () => {
   return (

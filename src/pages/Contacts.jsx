@@ -1,7 +1,5 @@
-import GetAQuote from "../Components/GetAQuote";
-import useView from "../Hooks/inview";
-import { motion } from "framer-motion";
-import MyContact from "../Components/MyContact";
+import GetAQuote from "../components/GetAQuote";
+import MyContact from "../components/MyContact";
 import { Link } from "react-router-dom";
 
 const Contacts = () => {

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Examples = () => {
 
   const normalscapeImages = Array.from({ length: 40 }, (_, i) => ({

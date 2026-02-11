@@ -1,51 +1,48 @@
-import { useState, useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import useWindowSize from "../Hooks/useWindowSize";
+import useWindowSize from "../hooks/useWindowSize";
+
+const BODY = [
+  {
+    sentence: "Expert Roofing, Elegant Doors, Quality Windows",
+    paragraph:
+      "Your trusted partner for durable roofing, stylish doors and windows, and seamless installations. Bringing craftsmanship and excellence to every project",
+  },
+  {
+    sentence: "Build Stronger, Live Better",
+    paragraph:
+      "We provide innovative solutions for modern homes and commercial spaces. Trust us to enhance durability, functionality, and aesthetics",
+  },
+  {
+    sentence: "Transforming Spaces with Precision and Style",
+    paragraph:
+      "From roofs that protect to interiors that inspire, we deliver excellence in every detail. Your vision, our craftsmanship.",
+  },
+  {
+    sentence: "Quality You Can Trust, Designs You'll Love",
+    paragraph:
+      "Reliable materials, expert installations, and timeless designs – everything you need to create a space that lasts.",
+  },
+];
 
 const FirstSection = () => {
-  const {width}= useWindowSize()
-  const [smallScreen, setSmallScreen]= useState(false)
+  const { width } = useWindowSize();
+  const smallScreen = width < 750;
 
-  useEffect(()=>{
-    if (width < 750) {
-      setSmallScreen(true)
-    } else {
-      setSmallScreen(false)
-    }
-  }, [width])
+  const pic = useMemo(
+    () => [
+      smallScreen ? "/edafekioja7.jpg" : "/edafekioja1.jpg",
+      "/edafekioja.jpg",
+      "/edafekioja2.jpg",
+      "/edafekioja3.jpg",
+      "/edafekioja6.jpg",
+      "/edafekioja5.jpg",
+    ],
+    [smallScreen]
+  );
 
-  const pic = [
-    `${smallScreen ? "/edafekioja7.jpg" : "/edafekioja1.jpg"}`,
-    "/edafekioja.jpg",
-    "/edafekioja2.jpg",
-    "/edafekioja3.jpg",
-    "/edafekioja6.jpg",
-    "/edafekioja5.jpg",
-  ];
-  const body = [
-    {
-      sentence: "Expert Roofing, Elegant Doors, Quality Windows",
-      paragraph:
-        "Your trusted partner for durable roofing, stylish doors and windows, and seamless installations. Bringing craftsmanship and excellence to every project",
-    },
-    {
-      sentence: "Build Stronger, Live Better",
-      paragraph:
-        "We provide innovative solutions for modern homes and commercial spaces. Trust us to enhance durability, functionality, and aesthetics",
-    },
-    {
-      sentence: "Transforming Spaces with Precision and Style",
-      paragraph:
-        "From roofs that protect to interiors that inspire, we deliver excellence in every detail. Your vision, our craftsmanship.",
-    },
-    {
-      sentence: "Quality You Can Trust, Designs You'll Love",
-      paragraph:
-        "Reliable materials, expert installations, and timeless designs – everything you need to create a space that lasts.",
-    },
-  ];
   const [eachBody, setEachBody] = useState(0);
   const [pics, setPics] = useState(0);
   const [loadTime, setLoadTime] = useState(3000);
@@ -90,12 +87,12 @@ const FirstSection = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setEachBody((prevIndex) => (prevIndex + 1) % body.length);
+      setEachBody((prevIndex) => (prevIndex + 1) % BODY.length);
       setPics((prevIndex) => (prevIndex + 1) % pic.length);
     }, loadTime); // Change slide every 2 seconds
 
     return () => clearInterval(interval); // Clean up on component unmount
-  }, [loadTime, body.length]);
+  }, [loadTime, pic.length]);
 
   useEffect(() => {
     const animate = async () => {
@@ -106,8 +103,9 @@ const FirstSection = () => {
   }, [eachBody, controls]);
 
   useEffect(() => {
-    setLoadTime(pic[pics] === "/edafekioja1.jpg" || pic[pics] === "/edafekioja7.jpg" ? 3000 : 10000);
-  }, [pics, pic]);
+    // First slide is the "hero" background; keep it faster than the rest.
+    setLoadTime(pics === 0 ? 3000 : 10000);
+  }, [pics]);
 
   return (
     <motion.div
@@ -131,19 +129,19 @@ const FirstSection = () => {
         className="font-bold capitalize text-[15px] md:text-[20px] text-[#FF840E] text-center"
         variants={cardVariants}
       >
-        {body[eachBody].sentence}
+        {BODY[eachBody].sentence}
       </motion.p>
       <motion.h2
         variants={cardVariants}
         className="text-center text-2xl xl:px-44 xl:text-5xl md:px-10 md:text-4xl lg:5xl lg:px-24 uppercase leading-10 text-white"
       >
-        {body[eachBody].paragraph}
+        {BODY[eachBody].paragraph}
       </motion.h2>
       <div>
         <motion.button
           variants={cardVariants}
           className="mt-10 p-5 font-extrabold bg-[#FF840E] text-black"
-          onClick={(e)=>navigate('/contacts')}
+          onClick={() => navigate("/contacts")}
         >
           CONTACT US
         </motion.button>{" "}

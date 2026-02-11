@@ -1,29 +1,34 @@
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import HeadNav from "./HeadNav";
 
 const Nav = ({setShowMenu}) => {
   
   const [showNavBar, setShowNavBar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > lastScrollY && currentScrollY > 50) {
-      setShowNavBar(false);
-    } else {
-      setShowNavBar(true);
-    }
-    setLastScrollY(currentScrollY);
-  };
-
-
+  const lastScrollYRef = useRef(0);
+  const tickingRef = useRef(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (!tickingRef.current) {
+        tickingRef.current = true;
+        window.requestAnimationFrame(() => {
+          const lastScrollY = lastScrollYRef.current;
+          const shouldHide = currentScrollY > lastScrollY && currentScrollY > 50;
+
+          setShowNavBar(!shouldHide);
+          lastScrollYRef.current = currentScrollY;
+          tickingRef.current = false;
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <nav className="" aria-label="Main navigation">
@@ -64,7 +69,7 @@ const Nav = ({setShowMenu}) => {
               <li>CONTACT US</li>
             </Link>
             <Link to="/faqs">
-              <li>FAQ'S</li>
+              <li>FAQ&apos;S</li>
             </Link>
           </ul>
         </div>

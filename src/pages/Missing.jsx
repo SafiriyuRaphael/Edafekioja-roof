@@ -1,5 +1,4 @@
 // src/pages/NotFound.jsx
-import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -14,7 +13,7 @@ const Missing = () => {
       >
         <h1 className="text-9xl font-extrabold tracking-wider">404</h1>
         <p className="mt-4 text-xl font-medium">
-          Oops! The page you're looking for doesn't exist.
+          Oops! The page you&apos;re looking for doesn&apos;t exist.
         </p>
       </motion.div>
 

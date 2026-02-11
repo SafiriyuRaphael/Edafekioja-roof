@@ -1,7 +1,3 @@
-
-import { hr } from 'framer-motion/client';
-import React from 'react'
-
 const Service = () => {
   const services = [
     {
@@ -119,7 +115,12 @@ const Service = () => {
            
              {/* Image */}
              <div>
-               <img src={`${item.img}`} alt={item.title} className="sm:pt-7 rounded-2xl" />
+               <img
+                 src={`${item.img}`}
+                 alt={item.title}
+                 loading="lazy"
+                 className="sm:pt-7 rounded-2xl"
+               />
              </div>
              
            </div>
